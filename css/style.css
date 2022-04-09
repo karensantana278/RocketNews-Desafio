@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap');
+
+/* css reset */
+:root {
+    --body-bg-color: #121214;
+    --text-color: #E1E1E6;
+    --title-color: #04D361;
+    --form-color: #A8A8A8;
+    --bg-button-color: #8257e5;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;  
+}
+
+body{
+    display: flex;
+    overflow-x: hidden;
+    height: 100%
+}
+
+.principal-content{
+    background-color: var(--body-bg-color);
+    text-transform: capitalize;
+    height: 100vh;
+    width: 50vw;
+    
+}
+
+.content-image{
+    background-image: url('/assets/read_news.jpg');
+    height: 100vh;
+    width: 50vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+   
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+   width: 70%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* header css */
+.header{
+    padding: 60px 0px 90px 0px;
+}
+#logo{
+    width: 389px;
+    height: 94px;
+}
+
+/* info css */
+
+.content-text{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content-text h1{
+    color: var(--title-color);
+    font-size: 2rem ;
+    font-family: 'Work Sans', sans-serif
+}
+
+.content-text h2, p{
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.content-text p{
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+/* form css */
+
+.content-form{
+    margin-bottom: 50px;
+   
+}
+
+.content-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    position: relative;
+}
+
+.content-form label{
+    font-size: 1rem;
+    color: var(--form-color);
+    font-weight: bold;
+}
+
+.input-email{
+    display: flex;
+    position: absolute;
+    top: 30px;
+}
+
+.input-email input{
+    width: 900px;
+    padding:20px 15px;
+    box-shadow: 7px 0px 0px 0px rgba(4,211,97,1) inset;
+    outline: none;
+    border: none;
+}
+
+.input-email{
+    display: flex;
+}
+.input-email button{
+    width:20%;
+    background-color: var(--bg-button-color);
+    border: none;
+    cursor: pointer;
+}
+
+.input-email button img{
+    width: 24px;
+    height: 24px;
+}
+
+.content-newsletter{
+    padding-top: 60px;
+    margin-bottom:60px;
+}
+
+
+.content-newsletter-text{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.content-newsletter a{
+    text-decoration: none;
+    color: var(--bg-button-color);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.content-newsletter a:hover{
+    color: #a282eb;
+}
+
+@media (max-width: 930px){
+    
+
+    html{
+        font-size:  14px;
+        max-width: 100%;
+    }
+
+    body{
+        flex-direction: column;
+    }
+
+    .header{
+        padding: 60px 0px;
+    }
+     
+    .principal-content{
+        width: 100%;
+        height: auto;
+    }
+
+    .content-image{
+        width: 100%;
+        overflow: hidden;
+        height: 20vh;
+        background-position: top;
+    }
+    
+
+    .input-email{
+        position: inherit;
+    }
+
+    .input-email button{
+        width: 100%;
+    }
+
+    .content-newsletter{
+        padding-top: 40px;
+    }
+
+    
+}
+
+@media (max-width: 930px) and (min-height: 900px){
+    html, body{
+        margin: 0;
+        height: 100%;
+    }
+
+    .principal-content, .content-image{
+        height: 100%;
+    }
+}  
+
+@media (min-width: 1000px) and (max-height: 600px){
+    html, body{
+        font-size: 12px;
+        margin: 0;
+        height: 100%;
+    }
+
+    #logo{
+        width: 289px;
+        height: 94px;
+    }
+
+    .header{
+        padding: 40px 0px;
+    }
+
+    .principal-content, .content-image{
+        height: 100%;
+    }
+
+    .input-email{
+        width: 500px;
+    }
+
+    .input-email button{
+        width: 100%;
+    }
+}
